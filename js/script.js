@@ -6,7 +6,7 @@ var quotes = [
     source: 'Jack D. Schwager',
     citation: 'Hedge Fund Market Wizards: How Winning Traders Win, p.240',
     year: 2012,
-    tag: '#equities'
+    tag: '#Forex'
   },
   {
     quote:
@@ -28,13 +28,13 @@ var quotes = [
     source: 'Bruce Kovner',
     citation: 'Hedge Fund Market Wizards: How Winning Traders Win, p.87',
     year: 1987,
-    tag: '#equities'
+    tag: '#Equities'
   },
   {
     quote:
       "Don't ever average losers. Decrease your trading volume when you are trading poorly; increase your volume when you are trading well. Never trade in situations where you don't have control. For example, I don't risk significant amounts of money in front of key reports, since that is gambling, not trading.",
     source: 'Paul Tudor Jones',
-    tag: '#equities'
+    tag: '#Equities'
   }
 ];
 // A random quote generator based on the min and max index of the quotes array.
@@ -89,7 +89,7 @@ function printQuote() {
   }
   // Conditions for addition tag information.
   if (quotes[qIndex].tag) {
-    var tag = '<span class=tag>' + quotes[qIndex].tag + '</span>';
+    var tag = '<span class=tag> ' + quotes[qIndex].tag + '</span>';
     html += tag;
   }
 
