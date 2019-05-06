@@ -87,10 +87,10 @@ function printQuote() {
     var year = '<span class=year>' + quotes[qIndex].year + '</span>';
     html += year;
   }
-  // Conditions for addition year information.
+  // Conditions for addition tag information.
   if (quotes[qIndex].tag) {
-    var year = '<span class=year>' + quotes[qIndex].year + '</span>';
-    html += year;
+    var tag = '<span class=tag>' + quotes[qIndex].tag + '</span>';
+    html += tag;
   }
 
   // Displays the new random  quote.
