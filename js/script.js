@@ -39,7 +39,7 @@ var quotes = [
 ];
 // A random quote generator based on the min and max index of the quotes array.
 function getRandomQuote() {
-  var rngSelector = Math.floor(Math.random() * quotes.length) + 1;
+  var rngSelector = quotes[Math.floor(Math.random() * quotes.length) + 1];
 
   return rngSelector;
 }
@@ -63,33 +63,32 @@ function print(html) {
 // This function is the quote format construct.
 function printQuote() {
   // Random index generation
-  var qIndex = getRandomQuote();
+  var quoteObj = getRandomQuote();
   var html = '';
-
+  console.log(quoteObj);
   // Background color
   var bgColor = randomColor();
   document.body.style.backgroundColor = bgColor;
 
   // Basic quote info
-  var quote = '<p class=quote>' + quotes[qIndex].quote + '</p>';
-  var source = '<p class=source>' + quotes[qIndex].source;
+  var quote = '<p class=quote>' + quoteObj.quote + '</p>';
+  var source = '<p class=source>' + quoteObj.source;
 
   html += quote + source;
 
   // Conditions for addition citation information.
-  if (quotes[qIndex].citation) {
-    var citation =
-      '<span class=citation>' + quotes[qIndex].citation + '</span>';
+  if (quoteObj.citation) {
+    var citation = '<span class=citation>' + quoteObj.citation + '</span>';
     html += citation;
   }
   // Conditions for addition year information.
-  if (quotes[qIndex].year) {
-    var year = '<span class=year>' + quotes[qIndex].year + '</span>';
+  if (quoteObj.year) {
+    var year = '<span class=year>' + quoteObj.year + '</span>';
     html += year;
   }
   // Conditions for addition tag information.
-  if (quotes[qIndex].tag) {
-    var tag = '<span class=tag> ' + quotes[qIndex].tag + '</span>';
+  if (quoteObj.tag) {
+    var tag = '<span class=tag> ' + quoteObj.tag + '</span>';
     html += tag;
   }
 
