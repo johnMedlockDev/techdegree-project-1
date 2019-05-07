@@ -65,7 +65,7 @@ function printQuote() {
   // Random index generation
   var quoteObj = getRandomQuote();
   var html = '';
-  console.log(quoteObj);
+
   // Background color
   var bgColor = randomColor();
   document.body.style.backgroundColor = bgColor;
